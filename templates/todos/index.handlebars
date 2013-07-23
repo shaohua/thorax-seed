@@ -1,4 +1,11 @@
 <h1>Menus</h1>
 {{#collection tag="ul"}}
-<li>{{title}}</li>
+<li {{#done}} class="done"{{/done}}>
+  <input type="checkbox" {{#done}}checked{{/done}}>
+  {{title}}
+</li>
 {{/collection}}
+<form>
+  <input name="title">
+  <input type="submit" value="Add">
+</form>
