@@ -7,7 +7,11 @@ Application.View.extend({
       this.collection.add(attrs);
       this.$('input[name="title"]').val('');
       // body...
-    }    
+    },
+    "change input[type='checkbox']": function(event){
+      var model = $(event.target).model();
+      model.set({done: event.target.checked});
+    }
   }
 
 });
